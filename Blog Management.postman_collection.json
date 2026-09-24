@@ -1,0 +1,1250 @@
+{
+  "info": {
+    "_postman_id": "4384cbf3-dddb-4a63-8c2b-f552830e3497",
+    "name": "Blog Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49738123"
+  },
+  "item": [
+    {
+      "name": "Register Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstname\": \"Jane\",\r\n  \"lastname\": \"Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Register Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"Jane\",\r\n  \"lastname\": \"Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-uAY2umrF6G6eY3tKM1xlLbsTqEA\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:09:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User registered successfully.\",\n    \"userId\": 3\n}"
+        }
+      ]
+    },
+    {
+      "name": "Login Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Login Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "329"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"149-efI3ppkb7JeCiFE39uQeKY73BRg\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:10:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqYW5lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTAyODA2MTgsImV4cCI6MTc5MDM2NzAxOH0.bF_FJIDyhQzINOgPI_72Ooyw6S5CbtTXnIoO_WGTLUw\",\n    \"user\": {\n        \"id\": 3,\n        \"firstname\": \"Jane\",\n        \"lastname\": \"Smith\",\n        \"email\": \"jane@example.com\",\n        \"role\": \"user\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqYW5lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTAyODA2MTgsImV4cCI6MTc5MDM2NzAxOH0.bF_FJIDyhQzINOgPI_72Ooyw6S5CbtTXnIoO_WGTLUw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "profile"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Profile",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "176"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"b0-JWW0xpRNPuJ8T142FszQG9GIseY\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:11:57 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"firstname\": \"Jane\",\n    \"lastname\": \"Smith\",\n    \"email\": \"jane@example.com\",\n    \"isActive\": 1,\n    \"role\": \"user\",\n    \"createAt\": \"2026-09-24T20:09:31.000Z\",\n    \"updateAt\": \"2026-09-24T20:09:31.000Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Blog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqYW5lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTAyODA2MTgsImV4cCI6MTc5MDM2NzAxOH0.bF_FJIDyhQzINOgPI_72Ooyw6S5CbtTXnIoO_WGTLUw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"blogTitle\": \"My First Blog Post\",\r\n  \"blog\": \"This is a detailed post about testing APIs with Postman.\",\r\n  \"category\": \"Testing\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/blogs/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "blogs",
+            "create"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Blog",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"blogTitle\": \"My First Blog Post\",\r\n  \"blog\": \"This is a detailed post about testing APIs with Postman.\",\r\n  \"category\": \"Testing\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/blogs/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs",
+                "create"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "51"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"33-A5KiX9GJMfvGw0l7JfSEaP4n2tg\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:13:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Blog created successfully.\",\n    \"blogId\": 4\n}"
+        }
+      ]
+    },
+    {
+      "name": "get all blog Guest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/blogs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "blogs"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get all blog Guest / Public",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/blogs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1065"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"429-phMSk1mk1CQDCFrR6VSsJp9xQ2A\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:13:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 4,\n        \"blogTitle\": \"My First Blog Post\",\n        \"blog\": \"This is a detailed post about testing APIs with Postman.\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:13:07.000Z\",\n        \"updateAt\": \"2026-09-24T20:13:07.000Z\",\n        \"author\": {\n            \"id\": 3,\n            \"firstname\": \"Jane\",\n            \"lastname\": \"Smith\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"blogTitle\": \"Introduction to API Testing\",\n        \"blog\": \"Fundamentals of REST API testing using Postman...\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"blogTitle\": \"Automating with Playwright\",\n        \"blog\": \"Complete guide to modern end-to-end automation testing...\",\n        \"category\": \"Automation\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"blogTitle\": \"SDET Career Roadmap\",\n        \"blog\": \"Essential skills and best practices for SDET engineers in 2026...\",\n        \"category\": \"Career\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"firstname\": \"Super\",\n            \"lastname\": \"Admin\"\n        }\n    }\n]"
+        },
+        {
+          "name": "get all blog Guest / Public",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/blogs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1065"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"429-phMSk1mk1CQDCFrR6VSsJp9xQ2A\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:13:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 4,\n        \"blogTitle\": \"My First Blog Post\",\n        \"blog\": \"This is a detailed post about testing APIs with Postman.\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:13:07.000Z\",\n        \"updateAt\": \"2026-09-24T20:13:07.000Z\",\n        \"author\": {\n            \"id\": 3,\n            \"firstname\": \"Jane\",\n            \"lastname\": \"Smith\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"blogTitle\": \"Introduction to API Testing\",\n        \"blog\": \"Fundamentals of REST API testing using Postman...\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"blogTitle\": \"Automating with Playwright\",\n        \"blog\": \"Complete guide to modern end-to-end automation testing...\",\n        \"category\": \"Automation\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"blogTitle\": \"SDET Career Roadmap\",\n        \"blog\": \"Essential skills and best practices for SDET engineers in 2026...\",\n        \"category\": \"Career\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"firstname\": \"Super\",\n            \"lastname\": \"Admin\"\n        }\n    }\n]"
+        },
+        {
+          "name": "get all blog Guest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/blogs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1067"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"42b-pQXaoOCBHvGKCOCJf16+nMUegFk\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:38:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 5,\n        \"blogTitle\": \"My First Blog Post\",\n        \"blog\": \"This is a detailed post about testing APIs with Postman.\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:34:36.000Z\",\n        \"updateAt\": \"2026-09-24T20:34:36.000Z\",\n        \"author\": {\n            \"id\": 3,\n            \"firstname\": \"Jane\",\n            \"lastname\": \"Updated\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"blogTitle\": \"Introduction to API Testing\",\n        \"blog\": \"Fundamentals of REST API testing using Postman...\",\n        \"category\": \"Testing\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"blogTitle\": \"Automating with Playwright\",\n        \"blog\": \"Complete guide to modern end-to-end automation testing...\",\n        \"category\": \"Automation\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 2,\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"blogTitle\": \"SDET Career Roadmap\",\n        \"blog\": \"Essential skills and best practices for SDET engineers in 2026...\",\n        \"category\": \"Career\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"firstname\": \"Super\",\n            \"lastname\": \"Admin\"\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Update Own Profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqYW5lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTAyODA2MTgsImV4cCI6MTc5MDM2NzAxOH0.bF_FJIDyhQzINOgPI_72Ooyw6S5CbtTXnIoO_WGTLUw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstname\": \"Jane\",\r\n  \"lastname\": \"Updated\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/profile/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "profile",
+            "update"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Own Profile",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"Jane\",\r\n  \"lastname\": \"Updated\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/profile/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "profile",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "43"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2b-KY/E92Tfys050iSJfbKz0kDj9VI\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:16:08 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Profile updated successfully.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Own Blog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqYW5lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTAyODA2MTgsImV4cCI6MTc5MDM2NzAxOH0.bF_FJIDyhQzINOgPI_72Ooyw6S5CbtTXnIoO_WGTLUw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"blogTitle\": \"My First Blog Post (Updated)\",\r\n  \"blog\": \"Updated content explaining REST API automation with Postman.\",\r\n  \"category\": \"Testing\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/blogs/update/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "blogs",
+            "update",
+            "4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Own Blog",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"blogTitle\": \"My First Blog Post (Updated)\",\r\n  \"blog\": \"Updated content explaining REST API automation with Postman.\",\r\n  \"category\": \"Testing\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/blogs/update/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs",
+                "update",
+                "4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"28-nM72oV8zBCLsdVjOXYodew6QhnM\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:17:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Blog updated successfully.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Admin Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Admin Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "335"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"14f-0sUGEttm+nI/l/3Vbxxt3ELsn2U\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:02 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MDI4MTE0MiwiZXhwIjoxNzkwMzY3NTQyfQ.0GQq_D2qISHyiEM6y2lFHMPri3YbagrZ7EShkF6blr4\",\n    \"user\": {\n        \"id\": 1,\n        \"firstname\": \"Super\",\n        \"lastname\": \"Admin\",\n        \"email\": \"admin@example.com\",\n        \"role\": \"admin\"\n    }\n}"
+        },
+        {
+          "name": "Admin Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "335"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"14f-ddkjtFxpXrzuXqcEVpxifPSS4yE\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:39:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MDI4MjM3MCwiZXhwIjoxNzkwMzY4NzcwfQ.KxxvpB_NFO-fyykpEiNkBoux6XY5QgnQr5kpZ6jsHjw\",\n    \"user\": {\n        \"id\": 1,\n        \"firstname\": \"Super\",\n        \"lastname\": \"Admin\",\n        \"email\": \"admin@example.com\",\n        \"role\": \"admin\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MDI4MTE0MiwiZXhwIjoxNzkwMzY3NTQyfQ.0GQq_D2qISHyiEM6y2lFHMPri3YbagrZ7EShkF6blr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "535"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"217-DsHITqRIXKIIU5K2WomzXQiUMM4\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:20:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"firstname\": \"Super\",\n        \"lastname\": \"Admin\",\n        \"email\": \"admin@example.com\",\n        \"isActive\": 1,\n        \"role\": \"admin\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"firstname\": \"John\",\n        \"lastname\": \"Doe\",\n        \"email\": \"john@example.com\",\n        \"isActive\": 1,\n        \"role\": \"user\",\n        \"createAt\": \"2026-09-24T20:01:42.000Z\",\n        \"updateAt\": \"2026-09-24T20:01:42.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"firstname\": \"Jane\",\n        \"lastname\": \"Updated\",\n        \"email\": \"jane@example.com\",\n        \"isActive\": 1,\n        \"role\": \"user\",\n        \"createAt\": \"2026-09-24T20:09:31.000Z\",\n        \"updateAt\": \"2026-09-24T20:16:08.000Z\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Deactivate User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MDI4MTE0MiwiZXhwIjoxNzkwMzY3NTQyfQ.0GQq_D2qISHyiEM6y2lFHMPri3YbagrZ7EShkF6blr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"isActive\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/3/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "3",
+            "status"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Deactivate User",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"isActive\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/3/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "3",
+                "status"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "62"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3e-J0o8h19Pv7eJ/SDVIshV3vZgVeI\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:22:06 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User status successfully updated to deactivated.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Blog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MDI4MTE0MiwiZXhwIjoxNzkwMzY3NTQyfQ.0GQq_D2qISHyiEM6y2lFHMPri3YbagrZ7EShkF6blr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/blogs/delete/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "blogs",
+            "delete",
+            "4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Blog",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/blogs/delete/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "blogs",
+                "delete",
+                "4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"28-rEmktTUEFH2qUPBemFPmbOUYP0U\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:23:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Blog deleted successfully.\"\n}"
+        }
+      ]
+    }
+  ]
+}
