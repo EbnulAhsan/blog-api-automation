@@ -185,7 +185,7 @@ Or manually open `reports/report.html` in your browser.
 The Newman HTML Extra report gives a full visual breakdown of every run — total requests, assertions, failed and skipped tests, timings, and collection metadata.
 
 <div align="center">
-<img src="./assets/newman-report.png" alt="Newman Run Dashboard" width="85%" />
+<img src="./assets/newman_report.png" alt="Newman Run Dashboard" width="85%" />
 </div>
 
 ---
